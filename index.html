@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
     <header>
-        <nav class="flex items-center justify-between p-4 bg-white shadow-md">
-            <!-- Logo -->
-            <div class="flex items-center space-x-2">
-              <img src="img/Group 26.png" alt="">
-            </div>
-          
-            <!-- Sort Button -->
-            <button class="px-4 py-2 flex gap-2 text-gray-700 bg-gray-200 rounded hover:bg-gray-300">
-                <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-                    <span class="text-white font-bold text-sm">▶</span>
-                  </div>
-                Sort by view
-            </button>
-          
-            <!-- Blog Button -->
-            <button class="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600">
-              Blog
-            </button>
-          </nav>
-          
+      <nav class="flex items-center justify-between p-4 bg-white shadow-md">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="img/Group 26.png" alt="" />
+        </div>
+
+        <!-- Sort Button -->
+        <button
+          class="px-4 py-2 flex gap-2 text-gray-700 bg-gray-200 rounded hover:bg-gray-300"
+        >
+          <div
+            class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center"
+          >
+            <span class="text-white font-bold text-sm">▶</span>
+          </div>
+          Sort by view
+        </button>
+
+        <!-- Blog Button -->
+        <button
+          class="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600"
+        >
+          Blog
+        </button>
+      </nav>
     </header>
     <main>
-        <section class="container mx-auto my-10">
-            
-            <div id="divPost" class="mx-auto flex gap-5 justify-center">
-
-            </div>      
-        </section>
+      <section class="container mx-auto my-10">
+        <div id="categoriesContainer" class="flex justify-center gap-4 mb-4"></div>
+        <div id="videosContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div
+        id="loadingSpinner"
+        style="display: none;"
+        class="fixed inset-0 flex justify-center items-center bg-white bg-opacity-50 z-50"
+      >
+        <div class="animate-spin rounded-full h-8 w-8 border-4 border-gray-300 border-t-blue-500"></div>
+      </div>
+                
+        </div>
+      </section>
     </main>
     <footer></footer>
     <script src="video.js"></script>
-</body>
+  </body>
 </html>
